@@ -1,1 +1,10 @@
+#initial setting
 /target/
+#add setting
+/.settings/
+.project
+.classpath
+*.class
+*.properties
+*.prefs
+pom.properties
