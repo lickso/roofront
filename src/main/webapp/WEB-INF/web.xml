@@ -3,5 +3,17 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>roofront base nm busi!</display-name>
+  
+  <!-- 初始访问页面 -->
+  <welcome-file-list> 
+  	<welcome-file>/index.html</welcome-file> 
+  	<!-- <welcome-file>/WEB-INF/test/login.jsp</welcome-file> -->
+  	
+  	<!-- <welcome-file>/WEB-INF/common/index/index.jsp</welcome-file> -->
+  	<!-- <welcome-file>/WEB-INF/test/index.html</welcome-file> -->
+  	
+  	<!-- <welcome-file>/WEB-INF/common/recommendShow.jsp</welcome-file> -->
+  	<!-- <welcome-file>/WEB-INF/admin/index.html</welcome-file> -->
+  </welcome-file-list> 
 </web-app>
