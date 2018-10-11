@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--通用样式-->
+<link rel="stylesheet" href="../../../assets/css/ng-common/ng-reset.css" />
+<link rel="stylesheet"
+	href="../../../assets/css/ng-common/ng-common.css" />
+<link rel="stylesheet"
+	href="../../../assets/css/ng-common/ng-components.css" />
+<link rel="stylesheet"
+	href="../../../assets/css/ng-common/ng-icfont/ng-icfont.css" />
+<!--私有样式-->
+<link rel="stylesheet" href="../../../assets/css/demo.css" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="jf-right-outer">
+		<div class="jf-right-wrap has-ctrl-bar">
+			<div class="jf-search-btns ">
+				<p>查询条件</p>
+				<a class="btn btn-blue fr btnSearch" id="query">查询</a>
+			</div>
+			<!-- 分隔 -->
+			<div class="fn-mg10"></div>
+			<div id="div-form">
+				<div id="groupSearchForm"></div>
+			</div>
+			<div class="jf-search-btns " >
+				<p>查询结果</p>
+			</div>
+			<div class="jf-search-result " id="list"></div>
+			<div class="fn-mg10"></div>
+			<div class="jf-search-btns ">
+				<p>信息备注</p>
+			</div>
+			<div class="jf-search-result " id="detailPanel"></div>
+		</div>
+	</div>
+	<script src="../../../assets/common/requirejsMain01.js"></script>
+	<script src="../../../assets/lib/requirejs/requirejs.min.js"
+		data-main="js/secondApplication/arrearsOrderHistory/arrearsOrderHistory"></script>
+</body>
+</html>
