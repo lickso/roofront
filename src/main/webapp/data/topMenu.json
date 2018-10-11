@@ -1,0 +1,29 @@
+{
+    "rtnCode": "0",
+    "rtnMsg": "success",
+	"result": {
+		"topMenu": [
+			{
+				"firstMenuId": "0010",
+				"firstMenuName": "客户信息",
+				"secondMenuList": [
+					{
+						"secondMenuId": "0011",
+						"secondMenuName": "客户添加",
+						"url":"cust/addCust"
+					},
+					{
+						"secondMenuId": "0012",
+						"secondMenuName": "客户删除",
+						"url":"cust/delCust"
+					},
+					{
+						"secondMenuId": "0013",
+						"secondMenuName": "客户修改",
+						"url":"cust/editCust"
+					}
+				]
+			}
+		]
+	}
+}
