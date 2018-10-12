@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans   
+      xmlns="http://www.springframework.org/schema/beans"  
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+      xmlns:mvc="http://www.springframework.org/schema/mvc"  
+      xmlns:context="http://www.springframework.org/schema/context" 
+      xsi:schemaLocation="  
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">  
+          
+    <!--开启Springioc 自动扫描注解包  --> 
+    <context:component-scan base-package="com.roo"/>  
+
+    <!-- 默认注解映射支持 -->
+    <mvc:annotation-driven /> 
+    
+    <!-- 配置默认的处理器 -->
+    <mvc:default-servlet-handler/> 
+      
+    <!--配置视图解析器  -->  
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="prefix" value="/"></property>  
+        <property name="suffix" value=".html"></property>  
+    </bean>    
+    
+    <!--登录拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.roo.shiro.core.intercpetor.LoginIntercpetor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+    
+    <!-- 解决乱码问题 -->
+    <mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+    
+</beans>
