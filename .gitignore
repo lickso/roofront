@@ -5,6 +5,7 @@
 .project
 .classpath
 *.class
-*.properties
+#note for system.properties
+#*.properties
 *.prefs
 pom.properties
