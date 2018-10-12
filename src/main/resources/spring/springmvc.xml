@@ -25,12 +25,12 @@
     </bean>    
     
     <!--登录拦截器 -->
-	<mvc:interceptors>
+	<!-- <mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
-			<bean class="com.roo.shiro.core.intercpetor.LoginIntercpetor"></bean>
+			<bean class="com.roo.intercpetor.LoginIntercpetor"></bean>
 		</mvc:interceptor>
-	</mvc:interceptors>
+	</mvc:interceptors> -->
     
     <!-- 解决乱码问题 -->
     <mvc:annotation-driven>
