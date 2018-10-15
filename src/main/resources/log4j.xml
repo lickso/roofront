@@ -21,7 +21,7 @@
     <appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">     
         <param name="File" value="D://roofront-logs//catalina.out" />
         <param name="Append" value="true" />
-        <param name="DatePattern" value="'.'yyyy-MM-dd-HH-mm'.txt'" />     
+        <param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />     
         <layout class="org.apache.log4j.PatternLayout">     
             <param name="ConversionPattern" value="[%p] [%d{HH:mm:ss:SSS}] [%c:%l] -%m%n" />     
         </layout>     
