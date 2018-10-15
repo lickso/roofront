@@ -22,26 +22,28 @@
     </filter>
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
+        <!-- <url-pattern>/*</url-pattern> -->
     </filter-mapping>
 	
 	<!-- 初始访问页面 -->
-  	<welcome-file-list> 
-  		<welcome-file>/index.html</welcome-file> 
+  	<welcome-file-list>
+  		<welcome-file>/src/modules/firstStage/userLogin/userLogin.html</welcome-file> 
+  		<!-- <welcome-file>/index.html</welcome-file> --> 
   	</welcome-file-list> 
 
 	<!-- 错误页面！ -->
 	<error-page>
     	<error-code>404</error-code> 
-    	<location>/WEB-INF/common/error/404.jsp</location>
+    	<location>/src/tpl/error/404/404.html</location>
   	</error-page>
   	<error-page>
     	<error-code>500</error-code>
-    	<location>/WEB-INF/common/error/500.jsp</location>
+    	<location>/src/tpl/error/500/500.html</location>
   	</error-page>
   	<error-page>
     	<exception-type>java.lang.NullPointerException</exception-type>
-    	<location>/WEB-INF/common/error/error.jsp</location>
+    	<location>/src/tpl/error/error/error.html</location>
   	</error-page>
   	
   	<!-- spring核心,classpath:spring/spring.xml -->
@@ -54,7 +56,7 @@
   	</context-param> 
   	
   	<!--配置Springmvc核心控制器  -->  
-  	<servlet> 
+  	<!-- <servlet> 
 	    <servlet-name>springmvc</servlet-name>  
 	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
 	    <init-param>  
@@ -64,11 +66,12 @@
 	    <load-on-startup>1</load-on-startup>    
 	    <async-supported>true</async-supported> 
   	</servlet>   
-  	<!--用来定义servlet所定义的url，也就是其访问的action-->  
+  	用来定义servlet所定义的url，也就是其访问的action  
   	<servlet-mapping>  
-        <servlet-name>springmvc</servlet-name>  
+        <servlet-name>springmvc</servlet-name>
+		<url-pattern>/</url-pattern> 
         <url-pattern>*.action</url-pattern>  
-  	</servlet-mapping> 
+  	</servlet-mapping>  -->
   
   	<!-- log4j配置 --> 
   	<context-param>
@@ -78,8 +81,5 @@
   	<listener>
 	    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
   	</listener>
-  	
-  	
-  	
-  	
+
 </web-app>
