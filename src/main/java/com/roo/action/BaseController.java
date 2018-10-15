@@ -1,4 +1,4 @@
-package com.roo.control;
+package com.roo.action;
 
 public class BaseController {
 
